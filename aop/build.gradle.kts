@@ -25,6 +25,10 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
+	// AOP
+	implementation("org.springframework:spring-aop")
+	implementation("org.aspectj:aspectjweaver")
+
 	// test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
@@ -44,7 +48,6 @@ tasks.withType<Test> {
 spotless {
 	kotlin {
 		ktfmt()
-		targetExclude("build/generated/source/apollo/server/autogen/graphql/**/*.kt")
 	}
 }
 
